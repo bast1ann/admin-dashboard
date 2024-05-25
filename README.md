@@ -1,1 +1,1 @@
-# admin-dashboard
+In this project I'm going to apply what I've learned from TOP Course, mainly the new CSS Grid knowledge.
