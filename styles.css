@@ -1,4 +1,4 @@
-/* Reset */
+/* reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -16,7 +16,7 @@ input, button, textarea, select {
   font: inherit;
 }
 
-/* Main Layout */
+/* main Layout */
 body {
   width: 100%;
   display: grid;
@@ -41,4 +41,12 @@ div {
 
 ul {
   list-style: none;
+}
+
+/* header */
+.header {
+  display: grid;
+  padding: 30px 60px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
 }
