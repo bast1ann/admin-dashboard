@@ -19,6 +19,7 @@ input, button, textarea, select {
 /* main Layout */
 :root {
   --bg-color-one: #1992d4;
+  --bg-color-one-hover: rgb(56, 185, 255);
   --bg-color-two: white;
   --bg-color-three: rgb(128, 128, 128);
   --text-color-one: white;
@@ -26,15 +27,21 @@ input, button, textarea, select {
   --text-color-three: rgb(202, 202, 202);
   --text-color-hover: rgb(186, 231, 255);
 }
+
 body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 230px 1fr;
+  grid-template-rows: min-content 1fr;
 }
 
-div {
+/* div {
   border: 1px solid black;
+} */
+
+svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* sidebar */
@@ -75,11 +82,6 @@ div {
   padding-bottom: 15px;
 }
 
-.sidebar ul li svg {
-  height: 24px;
-  width: 24px;
-}
-
 .sidebar ul li a:hover, .sidebar .brand a:hover {
   color: var(--text-color-hover);
   fill: var(--text-color-hover);
@@ -88,9 +90,103 @@ div {
 /* header */
 .header {
   display: grid;
-  padding: 30px 60px;
+  gap: 20px;
+  padding: 15px 60px;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+.header .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header .search-bar form {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+.header .search-bar input{
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 1rem;
+}
+
+.header .search-bar button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.header .profile-picture {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: no-repeat url("./img/luffy-pfp.jpg");
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.header .user-info svg:hover,
+.header .user-info .profile-picture:hover {
+  cursor: pointer;
+}
+
+.header .user-welcome {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.header .user-welcome div {
+  display: inline-block;
+}
+
+.header .user-welcome .greetings {
+  font-size: 1rem;
+}
+
+.header .user-welcome .user-name {
+  font-size: 1.4rem;
+}
+
+.header .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 30px;
+}
+
+.header .buttons button {
+  color: var(--text-color-one);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--bg-color-one);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 30px;
+}
+
+.header .buttons button:hover {
+  background-color: var(--bg-color-one-hover);
+  cursor: pointer;
 }
 
 /* main-content */
