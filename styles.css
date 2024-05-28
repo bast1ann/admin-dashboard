@@ -21,10 +21,12 @@ input, button, textarea, select {
   --bg-color-one: #1992d4;
   --bg-color-one-hover: rgb(56, 185, 255);
   --bg-color-two: white;
-  --bg-color-three: rgb(128, 128, 128);
+  --bg-color-three: rgba(0, 0, 0, 0.1);
+  --bg-color-four: #f0b429;
   --text-color-one: white;
   --text-color-two: black;
   --text-color-three: rgb(202, 202, 202);
+  --text-color-four: rgba(0, 0, 0, 0.7);
   --text-color-hover: rgb(186, 231, 255);
 }
 
@@ -34,10 +36,6 @@ body {
   grid-template-columns: 1fr 5fr;
   grid-template-rows: min-content 1fr;
 }
-
-/* div {
-  border: 1px solid black;
-} */
 
 svg {
   width: 24px;
@@ -196,21 +194,68 @@ svg {
   grid-template-rows: 1fr 1fr;
   padding: 30px 25px 60px 25px;
   gap: 45px;
+  background-color: var(--bg-color-three);
 }
 
-.your-projects {
-  grid-row: 1 / 3;
+.main-content .container {
+  background-color: var(--bg-color-two);
+  border-radius: 10px;
+}
 
+.main-content .title-section {
+  color: black;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.main-content .your-projects {
+  grid-row: 1 / 3;
+}
+
+.main-content .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 40px;
 }
 
-.your-projects .title {
-  grid-column: 1 / 3;
+.main-content .your-projects .title-section {
+  margin-bottom: 10px;
 }
 
-.project {
-  width: 400px;
-  height: 200px;
+.your-projects .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 220px;
+  background: linear-gradient(90deg, var(--bg-color-four) 10px, var(--bg-color-two) 10px);
+  padding: 30px;
+  gap: 20px;
 }
+
+.projects .project .title {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.projects .project .description {
+  font-size: 1rem;
+  color: var(--text-color-four);
+}
+
+.projects .project .buttons {
+  display: flex;
+  gap: 20px;
+  align-self: end;
+}
+
+.projects .project .buttons svg {
+  cursor: pointer;
+}
+
+/* testing */
+
+/* div {
+  border: 1px solid black;
+} */
