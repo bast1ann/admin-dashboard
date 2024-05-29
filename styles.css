@@ -42,6 +42,14 @@ svg {
   height: 24px;
 }
 
+.profile-picture {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 50%;
+}
+
 /* sidebar */
 .sidebar {
   grid-row: 1 / 3;
@@ -133,12 +141,7 @@ svg {
 }
 
 .header .profile-picture {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: no-repeat url("./img/luffy-pfp.jpg");
-  background-size: contain;
-  border-radius: 50%;
+  background: center / contain no-repeat url("./img/luffy-pfp.jpg");
 }
 
 .header .user-info svg:hover,
@@ -269,8 +272,56 @@ svg {
   margin-bottom: 20px;
 }
 
+/* main-content > trending */
+.trending .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.trending .container > div {
+  display: flex;
+}
+.trending .profile-picture.one {
+  background: center / contain no-repeat url("./img/boxer-dog.jpg");
+}
+
+.trending .profile-picture.two {
+  background: center / contain no-repeat url("./img/luffy-pfp.jpg");
+}
+
+.trending .profile-picture.three {
+  background: center / contain no-repeat url("./img/miles-morales.jpg");
+}
+
+.trending .profile-picture.four {
+  background: center / contain no-repeat url("./img/thom-yorke.png");
+}
+
+.trending .user {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.trending .user:not(.description) {
+  color: black;
+  font-size: 1rem;
+}
+
+.trending .user .description {
+  color: var(--text-color-four);
+  font-size: 1rem;
+}
+
+
 /* testing */
 
 /* div {
   border: 1px solid black;
 } */
+
+/* pfp
+https://www.pinterest.com.mx/pin/1137581187108530550/ - Luffy
+https://www.deviantart.com/sebastjimenez/art/Miles-Morales-pfp-977968827 - Miles Morales
+https://shop.adoptaboxerrescue.com/cdn/shop/files/243460335_4561736040513528_5681539529387929619_n_1500x.jpg?v=1638365705 - Boxer dog
+ */
