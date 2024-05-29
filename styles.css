@@ -200,14 +200,17 @@ svg {
 .main-content .container {
   background-color: var(--bg-color-two);
   border-radius: 10px;
+  padding: 30px;
 }
 
 .main-content .title-section {
   color: black;
   font-weight: bold;
   font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
+/* main-content > your-projects */
 .main-content .your-projects {
   grid-row: 1 / 3;
 }
@@ -218,10 +221,6 @@ svg {
   gap: 40px;
 }
 
-.main-content .your-projects .title-section {
-  margin-bottom: 10px;
-}
-
 .your-projects .project {
   display: flex;
   flex-direction: column;
@@ -229,7 +228,6 @@ svg {
 
   height: 220px;
   background: linear-gradient(90deg, var(--bg-color-four) 10px, var(--bg-color-two) 10px);
-  padding: 30px;
   gap: 20px;
 }
 
@@ -252,6 +250,23 @@ svg {
 
 .projects .project .buttons svg {
   cursor: pointer;
+}
+
+/* main-content > announcements */
+.announcements .container .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.announcements .container .description {
+  font-size: 0.9rem;
+  color: var(--text-color-four);
+}
+
+.announcements .container div:not(:last-child) {
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* testing */
