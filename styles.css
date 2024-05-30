@@ -46,6 +46,7 @@ input, button, textarea, select {
 
 body {
   width: 100%;
+  min-width: 1090px;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: min-content 1fr;
@@ -243,7 +244,7 @@ svg {
 .main-content .title-section {
   color: var(--text-color-primary);
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -272,12 +273,12 @@ svg {
 
 .projects .project .title {
   color: var(--text-color-primary);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .projects .project .description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-color-secondary);
 }
 
@@ -297,11 +298,11 @@ svg {
 }
 .announcements .container .title {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.13rem;
 }
 
 .announcements .container .description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-color-secondary);
 }
 
@@ -373,8 +374,8 @@ svg {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  top: 3px;
-  left: 3px;
+  top: 2px;
+  left: 2px;
   transition: 0.2s;
 }
 
