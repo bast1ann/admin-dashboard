@@ -152,9 +152,16 @@ svg {
 }
 
 .header .search-bar button {
+  position: relative;
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.header .search-bar button svg {
+  position: absolute;
+  right: -5px;
+  bottom: -12px;
 }
 
 .header .user-info {
