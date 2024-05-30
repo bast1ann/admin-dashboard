@@ -18,16 +18,19 @@ input, button, textarea, select {
 
 /* main Layout */
 :root {
-  --bg-color-one: #1992d4;
-  --bg-color-one-hover: rgb(56, 185, 255);
-  --bg-color-two: white;
-  --bg-color-three: rgba(0, 0, 0, 0.1);
-  --bg-color-four: #f0b429;
-  --text-color-one: white;
-  --text-color-two: black;
-  --text-color-three: rgb(202, 202, 202);
-  --text-color-four: rgba(0, 0, 0, 0.7);
-  --text-color-hover: rgb(186, 231, 255);
+  --bg-color-sidebar: #1992d4;
+  --bg-color-buttons: var(--bg-color-sidebar);
+  --bg-color-hover-buttons: rgb(56, 185, 255);
+  --bg-color-header: white;
+  --bg-color-container: white;
+  --bg-color-main-content: rgba(0, 0, 0, 0.1);
+  --bg-color-project-secondary: #f0b429;
+  --text-color-sidebar: white;
+  --text-color-buttons: var(--text-color-sidebar);
+  --text-color-primary: black;
+  --text-color-secondary: rgba(0, 0, 0, 0.7);
+  --text-color-hover-sidebar: rgb(186, 231, 255);
+  --color-announcements-separator: grey;
 }
 
 body {
@@ -58,7 +61,7 @@ svg {
   grid-template-rows: repeat(3, min-content);
   padding: 20px;
   gap: 70px;
-  background-color: var(--bg-color-one);
+  background-color: var(--bg-color-sidebar);
   font-weight: bold;
 }
 
@@ -70,8 +73,8 @@ svg {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--text-color-one);
-  fill: var(--text-color-one);
+  color: var(--text-color-sidebar);
+  fill: var(--text-color-sidebar);
   text-decoration: none;
 }
 
@@ -89,8 +92,8 @@ svg {
 }
 
 .sidebar ul li a:hover, .sidebar .brand a:hover {
-  color: var(--text-color-hover);
-  fill: var(--text-color-hover);
+  color: var(--text-color-hover-sidebar);
+  fill: var(--text-color-hover-sidebar);
 }
 
 /* header */
@@ -100,6 +103,7 @@ svg {
   padding: 15px 60px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, min-content);
+  background-color: var(--bg-color-header);
 }
 
 .header .search-bar {
@@ -176,17 +180,17 @@ svg {
 }
 
 .header .buttons button {
-  color: var(--text-color-one);
+  color: var(--text-color-buttons);
   font-size: 1rem;
   font-weight: bold;
-  background-color: var(--bg-color-one);
+  background-color: var(--bg-color-buttons);
   border: none;
   border-radius: 30px;
   padding: 5px 30px;
 }
 
 .header .buttons button:hover {
-  background-color: var(--bg-color-one-hover);
+  background-color: var(--bg-color-hover-buttons);
   cursor: pointer;
 }
 
@@ -196,17 +200,17 @@ svg {
   grid-template-columns: 1fr minmax(300px, 350px); /* 300-350px*/
   padding: 30px;
   gap: 30px;
-  background-color: var(--bg-color-three);
+  background-color: var(--bg-color-main-content);
 }
 
 .main-content .container {
-  background-color: var(--bg-color-two);
+  background-color: var(--bg-color-container);
   border-radius: 10px;
   padding: 30px;
 }
 
 .main-content .title-section {
-  color: black;
+  color: var(--text-color-primary);
   font-weight: bold;
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -231,19 +235,19 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(90deg, var(--bg-color-four) 10px, var(--bg-color-two) 10px);
+  background: linear-gradient(90deg, var(--bg-color-project-secondary) 10px, var(--bg-color-container) 10px);
   gap: 20px;
 }
 
 .projects .project .title {
-  color: black;
+  color: var(--text-color-primary);
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .projects .project .description {
   font-size: 1rem;
-  color: var(--text-color-four);
+  color: var(--text-color-secondary);
 }
 
 .projects .project .buttons {
@@ -267,11 +271,11 @@ svg {
 
 .announcements .container .description {
   font-size: 0.9rem;
-  color: var(--text-color-four);
+  color: var(--text-color-secondary);
 }
 
 .announcements .container div:not(:last-child) {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--color-announcements-separator);
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -309,12 +313,12 @@ svg {
 }
 
 .trending .user:not(.description) {
-  color: var(--text-color-two);
+  color: var(--text-color-primary);
   font-size: 1rem;
 }
 
 .trending .user .description {
-  color: var(--text-color-four);
+  color: var(--text-color-secondary);
   font-size: 1rem;
 }
 
