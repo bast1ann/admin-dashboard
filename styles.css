@@ -47,6 +47,7 @@ input, button, textarea, select {
 body {
   width: 100%;
   min-width: 1090px;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: min-content 1fr;
@@ -244,7 +245,7 @@ svg {
 .main-content .title-section {
   color: var(--text-color-primary);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
@@ -273,12 +274,12 @@ svg {
 
 .projects .project .title {
   color: var(--text-color-primary);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: bold;
 }
 
 .projects .project .description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-color-secondary);
 }
 
@@ -298,11 +299,11 @@ svg {
 }
 .announcements .container .title {
   font-weight: bold;
-  font-size: 1.13rem;
+  font-size: 1.05rem;
 }
 
 .announcements .container .description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-color-secondary);
 }
 
