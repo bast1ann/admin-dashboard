@@ -26,7 +26,6 @@ input, button, textarea, select {
   --text-color-buttons: var(--text-color-sidebar);
   --text-color-primary: black;
   --text-color-secondary: rgba(0, 0, 0, 0.7);
-  --text-color-hover-sidebar: #e095c5;
   --color-announcements-separator: grey;
 }
 
@@ -34,12 +33,14 @@ input, button, textarea, select {
   --bg-color-sidebar: #1992d4;
   --bg-color-hover-buttons: rgb(56, 185, 255);
   --bg-color-project-secondary: #f0b429;
+  --text-color-hover-sidebar: rgb(186, 231, 255);
 }
 
 :root.alternative {
   --bg-color-sidebar: #A3166F;
   --bg-color-hover-buttons: #D01C8E;
   --bg-color-project-secondary: #A39116;
+  --text-color-hover-sidebar: #e095c5;
 }
 
 
@@ -114,7 +115,6 @@ svg {
   gap: 10px;
   color: var(--text-color-sidebar);
   font-size: 1.1rem;
-  /* align-items: center; */
 }
 
 /* header */
@@ -125,6 +125,7 @@ svg {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, min-content);
   background-color: var(--bg-color-header);
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
 
 .header .search-bar {
@@ -208,6 +209,7 @@ svg {
   border: none;
   border-radius: 30px;
   padding: 5px 30px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
 }
 
 .header .buttons button:hover {
@@ -228,6 +230,7 @@ svg {
   background-color: var(--bg-color-container);
   border-radius: 10px;
   padding: 30px;
+  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
 
 .main-content .title-section {
@@ -347,6 +350,7 @@ svg {
 .switch {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   width: 60px;
   height: 30px;
   border-radius: 20px;
