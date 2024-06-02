@@ -270,6 +270,12 @@ svg {
   justify-content: space-between;
   background: linear-gradient(90deg, var(--bg-color-project-secondary) 10px, var(--bg-color-container) 10px);
   gap: 20px;
+
+  transition: all 0.5s;
+}
+
+.your-projects .project:hover {
+  transform: scale(1.03, 1.03);
 }
 
 .projects .project .title {
