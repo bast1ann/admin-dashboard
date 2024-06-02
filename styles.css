@@ -293,6 +293,10 @@ svg {
   cursor: pointer;
 }
 
+.projects .project .buttons svg:hover {
+  fill: var(--bg-color-project-secondary);
+}
+
 /* main-content > announcements */
 .announcements {
   margin-bottom: 30px;
@@ -396,9 +400,3 @@ input#toggle {
 /* div {
   border: 1px solid black;
 } */
-
-/* pfp
-https://www.pinterest.com.mx/pin/1137581187108530550/ - Luffy
-https://www.deviantart.com/sebastjimenez/art/Miles-Morales-pfp-977968827 - Miles Morales
-https://shop.adoptaboxerrescue.com/cdn/shop/files/243460335_4561736040513528_5681539529387929619_n_1500x.jpg?v=1638365705 - Boxer dog
- */
